@@ -28,7 +28,22 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+
+# Run app
+
 python run.py
 
-Run all tests:
+The app will be available at: http://localhost:5000
+Swagger docs: http://localhost:5000/apidocs
+
+
+# Migrations commands
+
+flask db init
+flask db migrate -m "Initial migration"
+flask db upgrade
+
+
+# Run all tests:
+
 pytest
