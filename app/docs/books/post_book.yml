@@ -1,0 +1,23 @@
+consumes:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    schema:
+      type: object
+      properties:
+        title:
+          type: string
+      required:
+        - title
+responses:
+  200:
+    description: Book created
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string

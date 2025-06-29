@@ -1,0 +1,28 @@
+consumes:
+  - application/json
+parameters:
+  - name: book_id
+    in: path
+    type: integer
+    required: true
+    description: ID of the book
+  - in: body
+    name: body
+    required: true
+    schema:
+      type: object
+      properties:
+        content:
+          type: string
+      required:
+        - content
+responses:
+  200:
+    description: Review created
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+        content:
+          type: string
